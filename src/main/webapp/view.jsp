@@ -131,6 +131,11 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- 부트스트랩 JS  -->
 	<script src="js/bootstrap.js"></script>
+	
+	<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
+
+	<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary	">삭제</a>
+	
 
 </body>
 </html>

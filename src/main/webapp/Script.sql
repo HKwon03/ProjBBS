@@ -32,8 +32,7 @@ create table BBS(
 -- 더미 데이터
 insert into BBS(bbsID, bbsTitle, userID, bbsContent, bbsAvailable)
 values('1111', '제목이요', '이름이요', '내용이요', '1');
-insert into BBS(bbsID, bbsTitle, userID, bbsContent, bbsAvailable)
-values('2222', '제목이요2', '이름이요2', '내용이요2', '2');
+
 commit;
 
 select * from BBS;

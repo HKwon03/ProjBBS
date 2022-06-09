@@ -27,7 +27,7 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 	public String getDate() {
 		//String SQL = "Select GETDATE()";
 		//
-		String SQL = "SELECT to_char(sysdate,'yyyy-mm-dd HH24:MI') FROM bbs";
+		String SQL = "SELECT to_char(sysdate,'yyyy-mm-dd hh24:mi') FROM bbs";
 		// Select GETDATE();
 		
 		try {
@@ -154,6 +154,37 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 		return null;
 	}
 	
+	
+	// 수정 함수
+	public int update(int bbsID, String bbsTitle, String bbsContent) {
+		String SQL = "UPDATE BBS SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, bbsTitle);
+			pstmt.setString(2, bbsContent);
+			pstmt.setInt(3, bbsID);
+			return pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+		}
+		
+		
+		// 삭제 함수
+		public int delete(int bbsID) {
+			String SQL = "UPDATE BBS SET bbsAvailable = 0 WHERE bbsID = ?";
+			try {
+				PreparedStatement pstmt = conn.prepareStatement(SQL);
+				pstmt.setInt(1, bbsID);
+				return pstmt.executeUpdate();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return -1; // 데이터베이스 오류
+		}
 	
 	
 }
