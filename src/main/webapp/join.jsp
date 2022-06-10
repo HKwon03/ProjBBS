@@ -11,80 +11,85 @@
 <title>jsp 게시판 웹사이트</title>
 </head>
 <body>
-	<!-- 네비게이션 -->
-	<nav class="navbar navbar-default">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collaspe" data-target="#bs-example-navbar-collapse-1"
-				aria-expaned="fale">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span> 
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="main.jsp">JSP 게시판</a>
-		</div>
-		<div class="collapse navbar-collapse"
-			id="#bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li><a href="main.jsp">메인</a></li>
-				<li><a href="bbs.jsp">게시판</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">접속하기<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li class="active">
-						<a href="login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
-					</ul></li>
-			</ul>
-		</div>
-	</nav>
+
+	<jsp:include page="header.jsp"></jsp:include>
+	
 	<!-- 로그인 폼 -->
-	<div class="container">
-		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
-			<!-- 점보트론 -->
-			<div class="jumbotron" style="padding-top: 20px;">
-				<!-- 로그인 정보를 숨기면서 전송post -->
-				<form method="post" action="joinAction.jsp">
-					<h3 style="text-align: center;">회원가입</h3>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="아이디"
-							name="userID" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" placeholder="비밀번호"
-							name="userPassword" maxlength="20">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="이름"
-							name="userName" maxlength="20">
-					</div>
-					<div class="form-group" style="text-align: center;">
+		<div class = "logform" style="margin-left: 30%; max-width: 800px; padding: 5px;" align="center">
+		<div class = "container-fluid row justify-content-center align-items-center">
+			<form class="validation-form" novalidate method="post" action="joinAction.jsp">
+					<div class="col-md-7">
+			    		<label for="name">아이디</label>
+			        		<input type="text" class="form-control" name="userID" placeholder="아이디" value="" required>
+			            		<div class="invalid-feedback">
+			                	아이디를 입력해주세요.
+			              		</div>
+			    	</div>
+					<div class="col-md-7">
+			    		<label for="password">비밀번호</label>
+			        		<input type="password" class="form-control" name="userPassword" placeholder="비밀번호를 입력해주세요" value="" required>
+			            		<div class="invalid-feedback">
+			              		비밀번호를 입력해주세요.
+			            		</div>
+					</div>	
+				 	<div class="col-md-7">
+			     		<label for="nickname">이름</label>
+			        		<input type="text" class="form-control" name="userName" placeholder="이름을 입력해주세요." value="" required>
+			            		<div class="invalid-feedback">
+			                	이름을 입력해주세요.
+			              		</div>
+			     	</div>
+			     	<br>
+					<div class="form-group" >
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active"> <input
 								type="radio" name="userGender" autocomplete="off" value="남자"
 								checked>남자
 							</label> <label class="btn btn-primary"> <input type="radio"
-								name="userGender" autocomplete="off" value="여자">여자
+							name="userGender" autocomplete="off" value="여자">여자
 							</label>
 						</div>
 					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="이메일"
-							name="userEmail" maxlength="50">
+				
+					<br>
+					<div class="col-md-7">
+						<label for="email">이메일</label>
+				    		<input type="email" class="form-control" name="userEmail" placeholder="you@example.com" value="" required>
+				        		<div class="invalid-feedback">
+				              	이메일을 입력해주세요.
+				           		</div>
 					</div>
-
-					<input type="submit" class="btn btn-primary form-control"
-						value="회원가입">
-
-				</form>
-			</div>
+			         
+			
+	        
+	         <hr class="mb-4">
+	         <div class="custom-control custom-checkbox">
+	           <input type="checkbox" class="custom-control-input" id="aggrement" required>
+	           <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+	         </div>
+	         <div class="mb-4"></div>
+	         <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+	       </form>
+	       
+	       
 		</div>
-	</div>
+		</div>
+	<script>
+    window.addEventListener('load', () => {
+      const forms = document.getElementsByClassName('validation-form');
+
+      Array.prototype.filter.call(forms, (form) => {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  	</script>
 	<!-- 애니매이션 담당 JQUERY -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>

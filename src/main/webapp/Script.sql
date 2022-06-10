@@ -20,18 +20,20 @@ commit;
 
 select * from user1;
 
+drop table bbs;
+
 create table BBS(
     bbsID number(8) primary key,
     bbsTitle varchar2(50) not null,
     userID varchar2(30) not null,
-    bbsDate date default sysdate,
+    bbsDate varchar2(20),
     bbsContent varchar2(2000),
     bbsAvailable number
 );
 
 -- 더미 데이터
-insert into BBS(bbsID, bbsTitle, userID, bbsContent, bbsAvailable)
-values('1111', '제목이요', '이름이요', '내용이요', '1');
+insert into BBS
+values('1', '제목이요', '이름이요', to_char(sysdate,'yyyy-mm-dd hh24:mI'), '내용이요', '1');
 
 commit;
 

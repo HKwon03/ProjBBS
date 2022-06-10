@@ -174,7 +174,7 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 		
 		// 삭제 함수
 		public int delete(int bbsID) {
-			String SQL = "UPDATE BBS SET bbsAvailable = 0 WHERE bbsID = ?";
+			String SQL = "DELETE BBS WHERE bbsID = ?";
 			try {
 				PreparedStatement pstmt = conn.prepareStatement(SQL);
 				pstmt.setInt(1, bbsID);
