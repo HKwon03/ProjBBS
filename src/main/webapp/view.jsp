@@ -69,22 +69,45 @@
 					.replaceAll("\n", "<br/>") -->
 				</tbody>
 			</table>
-			<a href="bbs.jsp" class="btn btn-primary">목록</a>
-			<%
-				//글작성자 본인일시 수정 삭제 가능
-				if (userID != null && userID.equals(bbs.getUserID())) {
-			%>
-			<a href="update.jsp?bbsID=<%=bbsID%>" class="btn btn-primary">수정</a>
-			<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
-			<%
-				}
-			%>
+			
+			<br>
+			<br>
+			<div class="d-grid gap-2 d-md-block">
+			
+				<a href="bbs.jsp" class="btn btn-outline-primary btn-lg">목록</a>
+				<%
+					//글작성자 본인일시 수정 삭제 가능
+					if (userID != null && userID.equals(bbs.getUserID())) {
+				%>
+				
+				
+				<a href="update.jsp?bbsID=<%=bbsID%>" class="btn btn-outline-primary btn-lg">수정</a>
+				
+				
+				<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-outline-primary btn-lg">삭제</a>
+				<%
+					}
+				%>
+			</div>
 		</div>
 	</div>
 	<!-- 애니매이션 담당 JQUERY -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- 부트스트랩 JS  -->
 	<script src="js/bootstrap.js"></script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<jsp:include page="footer.jsp"></jsp:include>
 	
 </body>
 </html>

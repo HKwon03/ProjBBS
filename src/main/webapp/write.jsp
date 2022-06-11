@@ -41,9 +41,20 @@
 						</tr>
 					</tbody>
 				</table>
-				<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+				<div class="d-grid gap-2 d-md-block">
+				<input type="submit" class="btn btn-outline-primary btn-lg pull-right" value="글쓰기">
+				</div>
 			</form>
 		</div>
 	</div>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<jsp:include page="footer.jsp"></jsp:include>
+	
 </body>
 </html>

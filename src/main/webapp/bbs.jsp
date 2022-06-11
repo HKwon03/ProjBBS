@@ -70,18 +70,20 @@ a, a:hover {
 					%>
 				</tbody>
 			</table>
+			
 			<!-- 페이지 넘기기 -->
+			<div class="d-grid gap-2 d-md-block">
 			<%
 				if (pageNumber != 1) {
 			%>
 			<a href="bbs.jsp?pageNumber=<%=pageNumber - 1%>"
-				class="btn btn-success btn-arrow-left">이전</a>
+				class="btn btn-outline-success btn-lg btn-arrow-left">이전</a>
 			<%
 				}
 				if (bbsDAO.nextPage(pageNumber)) {
 			%>
 			<a href="bbs.jsp?pageNumber=<%=pageNumber + 1%>"
-				class="btn btn-success btn-arrow-left">다음</a>
+				class="btn btn-outline-success btn-lg btn-arrow-left">다음</a>
 			<%
 				}
 			%>
@@ -90,22 +92,31 @@ a, a:hover {
 				//if logined userID라는 변수에 해당 아이다가 담기고 if not null
 				if (session.getAttribute("userID") != null) {
 			%>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<a href="write.jsp" class="btn btn-outline-primary btn-lg pull-right">글쓰기</a>
 			<%
 				} else {
 			%>
-			<button class="btn btn-primary pull-right"
+			<button class="btn btn-outline-primary btn-lg pull-right"
 				onclick="if(confirm('로그인 하세요'))location.href='login.jsp';"
 				type="button">글쓰기</button>
 			<%
 				}
 			%>
-
+			</div>
 		</div>
 	</div>
 	<!--  애니매이션 담당 JQUERY -->
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!--  부트스트랩 JS -->
 	<script src="js/bootstrap.js"></script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<jsp:include page="footer.jsp"></jsp:include>
+	
 </body>
 </html>

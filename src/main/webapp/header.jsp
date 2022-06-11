@@ -28,9 +28,12 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="main.jsp" class="nav-link px-2"><img src="img/로고.png" alt=""></a></li>
-          <li><a href="main.jsp" class="nav-link px-2 link-dark">메인</a></li>
-          <li><a href="bbs.jsp" class="nav-link px-2 link-dark">게시판</a></li>
+          <li><a href="main.jsp" class="nav-link px-4"><img src="img/로고.png" alt=""></a></li>
+          <li><a href="#" class="nav-link px-4 link-dark">녹차</a></li>
+          <li><a href="#" class="nav-link px-4 link-dark">청차</a></li>
+          <li><a href="#" class="nav-link px-4 link-dark">홍차</a></li>
+          <li><a href="#" class="nav-link px-4 link-dark">흑차</a></li>
+          <li><a href="bbs.jsp" class="nav-link px-4 link-dark">게시판</a></li>
         </ul>
 
 

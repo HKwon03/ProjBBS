@@ -93,5 +93,14 @@
 	<!-- 애니매이션 담당 JQUERY -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<jsp:include page="footer.jsp"></jsp:include>
+	
 </body>
 </html>

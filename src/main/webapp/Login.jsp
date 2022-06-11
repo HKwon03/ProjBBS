@@ -49,6 +49,16 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- ºÎÆ®½ºÆ®·¦ JS  -->
 	<script src="js/bootstrap.js"></script>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 
