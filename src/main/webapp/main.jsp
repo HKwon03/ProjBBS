@@ -44,7 +44,7 @@
 			      <img src="img/차캐러셀3.png" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5>아기자기한 티웨어 세트</h5>
-			        <p>차를 마실때 분위기와 맛을 더욱 좋게만드는 테웨어 세트</p>
+			        <p>차를 마실때 분위기와 맛을 더욱 좋게만드는 티웨어 세트</p>
 		      </div>
 			    </div>
 			  </div>

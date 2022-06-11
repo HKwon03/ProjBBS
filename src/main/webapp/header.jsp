@@ -43,9 +43,9 @@
 			if (userID == null) {
 		%>
 
-        <div class="dropdown text-end">
+        <div class="dropdown text-end" style="display: flex-row;">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          접속하기</a>
+          로그인 하세요  <img src="img/로그인전.png" alt="로그인 이미지"></a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="login.jsp">로그인</a></li>
 			<li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
@@ -56,9 +56,9 @@
 			//로그인 된경우
 			} else {
 		%>
-     	<div class="dropdown text-end">
+     	<div class="dropdown text-end" style="display: flex-row;">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          회원관리</a>
+          <%= userID %> 님 접속중  <img src="img/로그인후.png" alt="로그인 이미지"></a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="logoutAction.jsp">로그아웃</a></li>
           </ul>
