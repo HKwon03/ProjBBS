@@ -75,8 +75,8 @@
 						</tr>
 					</tbody>
 				</table>
-				<button type="submit" class="btn btn-primary pull-right">글
-					수정</button>
+				<button type="submit" class="btn btn-outline-primary btn-lg pull-right">
+				글수정</button>
 			</form>
 		</div>
 	</div>
@@ -84,6 +84,8 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- 부트스트랩 JS  -->
 	<script src="js/bootstrap.js"></script>
+	
+	<br><br><br><br><br>
 	
 	<jsp:include page="footer.jsp"></jsp:include>
 	

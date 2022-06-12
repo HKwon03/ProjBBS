@@ -33,7 +33,7 @@
           <li><a href="#" class="nav-link px-4 link-dark">청차</a></li>
           <li><a href="#" class="nav-link px-4 link-dark">홍차</a></li>
           <li><a href="#" class="nav-link px-4 link-dark">흑차</a></li>
-          <li><a href="bbs.jsp" class="nav-link px-4 link-dark">게시판</a></li>
+          <li><a href="bbs.jsp" class="nav-link px-4 link-dark">자유 게시판</a></li>
         </ul>
 
 
@@ -45,7 +45,7 @@
 
         <div class="dropdown text-end" style="display: flex-row;">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          로그인 하세요  <img src="img/로그인전.png" alt="로그인 이미지"></a>
+          <img src="img/로그인전.png" alt="로그인 이미지"></a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="login.jsp">로그인</a></li>
 			<li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
@@ -58,9 +58,10 @@
 		%>
      	<div class="dropdown text-end" style="display: flex-row;">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          <%= userID %> 님 접속중  <img src="img/로그인후.png" alt="로그인 이미지"></a>
+          <img src="img/로그인후.png" alt="로그인 이미지"> <%= userID %> 님 접속중  </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="logoutAction.jsp">로그아웃</a></li>
+            <li><a class="dropdown-item" href="updateUser.jsp">회원정보수정</a></li>
           </ul>
         </div>
         <%

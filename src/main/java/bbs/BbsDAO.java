@@ -92,7 +92,7 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 			pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
 			//게시글의 개수에 따라 값으로 나오게 할려고 그래서 6보다 작게 할려고 모든 글자가 다 나오게 할려고 이다. 그래서 일부러 함수를 만든것이다.
 			rs = pstmt.executeQuery();
-			//System.out.println("여기 에러요~");
+			//System.out.println("getList에 문제발생");
 			while (rs.next()) {
 				Bbs bbs = new Bbs();
 				bbs.setBbsID(rs.getInt(1));
@@ -105,7 +105,7 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("리스트 오류");
+			System.out.println("getList 예외발생");
 		}
 		return list;
 	}

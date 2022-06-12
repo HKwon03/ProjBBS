@@ -51,15 +51,15 @@
 				<tbody>
 					<tr>
 						<td style="width: 20%; background-color: #eeeeee;">글 제목</td>
-						<td colspan="2"><%=bbs.getBbsTitle()%></td>
+						<td colspan="2" style="text-align: left;"><%=bbs.getBbsTitle()%></td>
 					</tr>
 					<tr>
 						<td style="width: 20%; background-color: #eeeeee;">작성자</td>
-						<td colspan="2"><%=bbs.getUserID()%></td>
+						<td colspan="2" style="text-align: left;"><%=bbs.getUserID()%></td>
 					</tr>
 					<tr>
 						<td style="width: 20%; background-color: #eeeeee;">작성일</td>
-						<td colspan="2"><%=bbs.getBbsDate()%></td>
+						<td colspan="2" style="text-align: left;"><%=bbs.getBbsDate()%></td>
 					</tr>
 					<tr>
 						<td style="width: 20%; background-color: #eeeeee;">내용</td>
