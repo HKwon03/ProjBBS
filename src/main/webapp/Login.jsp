@@ -26,7 +26,7 @@
 			<div class="jumbotron" style="padding-top: 20px;">
 				<!-- 로그인 정보를 숨기면서 전송post -->
 				<form method="post" action="loginAction.jsp">
-					<h3 style="text-align: center;">로그인화면</h3>
+					<h3 style="text-align: center;">로그인</h3>
 					<br>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디"
