@@ -1,4 +1,4 @@
-drop table user1;
+            drop table user1;
 
 -- user01 테이블 생성
 create table user1 (

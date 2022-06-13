@@ -45,24 +45,24 @@
 				<thead>
 					<tr>
 						<th colspan="3"
-							style="background-color: #eeeeee; text-align: center;">글 보기</th>
+							style="background-color: #E6E6FA; text-align: center;">글 상세보기</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td style="width: 20%; background-color: #eeeeee;">글 제목</td>
+						<td style="width: 20%; background-color: #E6E6FA;">제목</td>
 						<td colspan="2" style="text-align: left;"><%=bbs.getBbsTitle()%></td>
 					</tr>
 					<tr>
-						<td style="width: 20%; background-color: #eeeeee;">작성자</td>
+						<td style="width: 20%; background-color: #E6E6FA;">글쓴이</td>
 						<td colspan="2" style="text-align: left;"><%=bbs.getUserID()%></td>
 					</tr>
 					<tr>
-						<td style="width: 20%; background-color: #eeeeee;">작성일</td>
+						<td style="width: 20%; background-color: #E6E6FA;">작성일</td>
 						<td colspan="2" style="text-align: left;"><%=bbs.getBbsDate()%></td>
 					</tr>
 					<tr>
-						<td style="width: 20%; background-color: #eeeeee;">내용</td>
+						<td style="width: 20%; background-color: #E6E6FA;">내용</td>
 						<td colspan="2" style="min-height: 200px; text-align: left;"><%=bbs.getBbsContent()%></td>
 					</tr>
 <!-- .replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")

@@ -45,9 +45,9 @@ a, a:hover {
 				style="text-align: center; border: 1ps solid #dddddd">
 				<thead>
 					<tr>
-						<th style="background-color: #E6E6FA; text-align: center;">번호</th>
+						<th style="background-color: #E6E6FA; text-align: center;">글번호</th>
 						<th style="background-color: #E6E6FA; text-align: center;">제목</th>
-						<th style="background-color: #E6E6FA; text-align: center;">작성자</th>
+						<th style="background-color: #E6E6FA; text-align: center;">글쓴이</th>
 						<th style="background-color: #E6E6FA; text-align: center;">작성일</th>
 					</tr>
 				</thead>

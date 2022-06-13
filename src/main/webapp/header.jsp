@@ -62,7 +62,7 @@
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="logoutAction.jsp">로그아웃</a></li>
             <li><a class="dropdown-item" href="updateUser.jsp">회원정보수정</a></li>
-            <li><a class="dropdown-item" href="deleteUserAction.jsp" onclick="if(!confirm('삭제하시겠습니까?')){return false;}">회원탈퇴</a></li>
+            <li><a class="dropdown-item" href="deleteUserAction.jsp" onclick="if(!confirm('탈퇴하시겠습니까?')){return false;}">회원탈퇴</a></li>
           </ul>
         </div>
         <%
