@@ -18,12 +18,10 @@
 
 	<%
 	String userId = (String)session.getAttribute("userID");
-	String userPassword = request.getParameter("userPassword");
 	
 	UserDAO manager = new UserDAO();
-	User m = manager.getUser(userId, userPassword);
 	
-	try {
+	
 	%>
 
 	<jsp:include page="header.jsp"></jsp:include>
@@ -31,7 +29,7 @@
 	<!-- 로그인 폼 -->
 		<div class = "logform" style="margin-left: 30%; max-width: 800px; padding: 5px;" align="center">
 		<div class = "container-fluid row justify-content-center align-items-center">
-			<form class="validation-form" novalidate method="post" action="joinAction.jsp">
+			<form class="validation-form" novalidate method="post" action="updateUserAction.jsp">
 					<div class="col-md-7">
 			    		<label for="name">아이디</label>
 			        		<input type="text" class="form-control" name="userID" placeholder="아이디" value="<%=userId %>" required>
@@ -41,7 +39,7 @@
 			    	</div>
 					<div class="col-md-7">
 			    		<label for="password">비밀번호</label>
-			        		<input type="password" class="form-control" name="userPassword" placeholder="변경할 비밀번호를 입력해주세요" value="" required>
+			        		<input type="password" class="form-control" name="userPassword" placeholder="비밀번호를 입력해주세요" value="" required>
 			            		<div class="invalid-feedback">
 			              		비밀번호를 입력해주세요.
 			            		</div>
@@ -88,7 +86,6 @@
 	       
 		</div>
 		</div>
-	<%}catch(Exception e){}%>
 	<script>
     window.addEventListener('load', () => {
       const forms = document.getElementsByClassName('validation-form');

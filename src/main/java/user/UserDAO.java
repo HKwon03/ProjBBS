@@ -79,59 +79,43 @@ public class UserDAO {
 		 return -1;//DB오류
 	 }
 	 
-	 public int updateUser(User user) {
-		 
+	 //user수정
+	 public int updateUser(String userId, String userName, String userGender, String userEmail) {
+		 String SQL = "UPDATE USER1 SET userName = ?, userGender = ?, userEmail = ? WHERE userId = ?";
 		 try {
-			String orgPassword = user.getUserPassword();
-			
-			String SQL = "SELECT userPassword FROM User1 WHERE userId = ?";
-			
+			 
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user.getUserID());
-			rs = pstmt.executeQuery();
+			pstmt.setString(1, userName);
+			pstmt.setString(2, userGender);
+			pstmt.setString(3, userEmail);
+			pstmt.setString(4, userId);
 			
-			if(rs.next()) {		//해당 아이디 DB에 존재
-				String dbUserPassword = rs.getString("userPassword");	//폼에서 넘긴 암호와 DB에서 가져온 암호가 일치하는지 확인
+			pstmt.executeUpdate();
+			
+			return 1;	//update 성공
 				
-				if(orgPassword.equals(dbUserPassword)) {
-					SQL = "UPDATE USER1 SET userName = ?, userGender = ?, userEmail = ? WHERE userId = ?";
-					
-					pstmt = conn.prepareStatement(SQL);
-					pstmt.setString(1, user.getUserName());
-					pstmt.setString(2, user.getUserGender());
-					pstmt.setString(3, user.getUserEmail());
-					pstmt.setString(4, user.getUserID());
-					
-					pstmt.executeQuery();
-					
-					return 1;	//update 성공
-				} else {
-					return 0;	//아이디 존재 but 암호 불일치
-				}
-			}
+			
 		 } catch(Exception e) {
 			 e.printStackTrace();
+			 System.out.println("업데이트 오류");
 		 }
 		 return -1;
 	 }
 	 
 	 
-	 public User getUser(String userID, String userPassword) {
+	 public User getUser(String userId) {
 		 User user = null;
 		 
 		 try {
 			 
-			 String orgPassword = userPassword;
-			 
 			 String SQL = "SELECT * FROM USER1 WHERE userID = ?";
 			 pstmt = conn.prepareStatement(SQL);
-			 pstmt.setString(1, userID);
+			 pstmt.setString(1, userId);
 			 rs = pstmt.executeQuery();
 			 
 			 if(rs.next()) {
-				 String dbUserPassword = rs.getString("userPassword");
-				 
-				 if(orgPassword.equals(dbUserPassword)) {
+				 String dbUserId = rs.getString("userId");
+				 if(userId.equals(dbUserId)) {
 					 user = new User();
 					 
 					 user.setUserID(rs.getString("userID"));
@@ -146,5 +130,21 @@ public class UserDAO {
 		 }
 		 return user;
 	 }
+	 
+	// 삭제 함수
+	public int deleteUser(String userId) {
+		String SQL = "DELETE user1 WHERE userId = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userId);
+			return pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+		}
+ 
+ 
 	 
  }

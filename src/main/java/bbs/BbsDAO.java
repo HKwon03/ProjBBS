@@ -21,9 +21,9 @@ public class BbsDAO {// 데이터 베이스 접근 객체의 약자
 			e.printStackTrace();
 		}
 	}
-//현재의 시간을 가져오는 함수
+
 	
-	
+	//현재의 시간을 가져오는 함수
 	public String getDate() {
 		//String SQL = "Select GETDATE()";
 		//

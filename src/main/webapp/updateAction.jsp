@@ -5,7 +5,6 @@
 <%@ page import="java.io.PrintWriter"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-	//sresponse.setContentType("text/html; charset=UTF-8");
 %>
 <!DOCTYPE html>
 <html>
@@ -70,7 +69,6 @@
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
 					script.println("location.href='bbs.jsp'");
-					//script.println("history.back()");
 					script.println("</script>");
 				}
 			}
