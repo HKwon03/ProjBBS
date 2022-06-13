@@ -18,7 +18,7 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<!-- ·Î±äÆû -->
+	<!-- ·Î±×ÀÎÆû -->
 	<div class="container" align = "center">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">

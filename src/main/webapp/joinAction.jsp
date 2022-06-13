@@ -21,7 +21,7 @@
 </head>
 <body>
 	<%
-		//로긴된 회원들은 페이지에 접속할수 없도록
+		//로그인된 회원들은 페이지에 접속할수 없도록
 		String userID = null;
 		if (session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");

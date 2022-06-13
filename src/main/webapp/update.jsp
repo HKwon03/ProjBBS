@@ -15,7 +15,7 @@
 </head>
 <body>
 	<%
-		//로긴 한사람이면 userID라는 변수에 해당 아이디가 담기고 그렇지 않으면 null값
+		//로그인 한사람이면 userID라는 변수에 해당 아이디가 담기고 그렇지 않으면 null값
 		String userID = null;
 		if (session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");
