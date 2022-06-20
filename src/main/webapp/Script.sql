@@ -46,3 +46,6 @@ alter table bbs modify bbsDate varchar2(20);
 SELECT to_char(sysdate,'yyyy-mm-dd hh24:mI') FROM bbs;
 
 desc bbs;
+
+select * from user1;
+select * from BBS order by bbsID desc;
